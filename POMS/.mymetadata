@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="POMS"
+  id="myeclipse.1405319903000"
+  context-root="/POMS"
+  j2ee-spec="5.0"
+  archive="POMS.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+

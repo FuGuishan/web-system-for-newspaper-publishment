@@ -1,0 +1,31 @@
+*{
+	margin:0px;
+	padding: 0px;
+	font-size: 14px;
+}
+
+.bread-crumb{
+	width: 1000px;
+	margin-top: 10px;
+	margin-left: 20px;
+}
+
+.bread-crumb li a,a:hover,a:link,a:visited,a:active{
+	text-decoration: none;
+	outline: none;
+}
+
+.panel-title{
+	font-size: 15px;
+}
+
+.function-panel{
+	width:1000px;
+	margin-top: 10px;
+	margin-left: 20px;
+}
+
+hr{
+	margin-left:20px;
+	width:1000px;
+}

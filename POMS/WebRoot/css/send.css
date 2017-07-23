@@ -1,0 +1,9 @@
+#sendform hr{
+	width:1000px;
+	margin-left: 0px;
+}
+
+#sendform textarea{
+	width:1000px;
+	height:400px;
+}

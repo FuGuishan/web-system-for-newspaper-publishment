@@ -1,0 +1,447 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" 
+	xmlns="http://java.sun.com/xml/ns/javaee" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+	http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+ <servlet>
+    <servlet-name>Test</servlet-name>
+    <servlet-class>Test</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Test</servlet-name>
+    <url-pattern>/servlet/Test</url-pattern>
+  </servlet-mapping>
+ 	<!-- 潘逸杰的SelectServlet  begin -->
+	<servlet>
+		<servlet-name>selectProvinceServlet</servlet-name>
+		<servlet-class>hit.poms.subStation.servlet.SelectProvince</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>selectProvinceServlet</servlet-name>
+		<url-pattern>/selectProvinceServlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>selectCityServlet</servlet-name>
+		<servlet-class>hit.poms.subStation.servlet.SelectCity</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>selectCityServlet</servlet-name>
+		<url-pattern>/selectCityServlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>selectTownServlet</servlet-name>
+		<servlet-class>hit.poms.subStation.servlet.SelectTown</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>selectTownServlet</servlet-name>
+		<url-pattern>/selectTownServlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>subStationQueryServlet</servlet-name>
+		<servlet-class>hit.poms.subStation.servlet.SubStationQuery</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>subStationQueryServlet</servlet-name>
+		<url-pattern>/subStationQueryServlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>modificationDepartmentServlet</servlet-name>
+		<servlet-class>hit.poms.subStation.servlet.ModificationDepartment</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>modificationDepartmentServlet</servlet-name>
+		<url-pattern>/modificationDepartmentServlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>empEditServlet</servlet-name>
+		<servlet-class>hit.poms.subStation.servlet.EmpEdit</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>empEditServlet</servlet-name>
+		<url-pattern>/empEditServlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>removeEmpServlet</servlet-name>
+		<servlet-class>hit.poms.subStation.servlet.RemoveEmp</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>removeEmpServlet</servlet-name>
+		<url-pattern>/removeEmpServlet</url-pattern>
+	</servlet-mapping>
+	
+	<!-- selectProvince  end -->
+  
+   <servlet>
+		<servlet-name>alterType</servlet-name>
+		<servlet-class>hit.poms.stuff.servlet.AlterType</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>alterType</servlet-name>
+		<url-pattern>/alterType</url-pattern>
+	</servlet-mapping>
+
+	 <!-- dsz 系统状态维护 -->
+  <servlet>
+  	<servlet-name>quitServlet</servlet-name>
+  	<servlet-class>hit.poms.systemstate.QuitServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>quitServlet</servlet-name>
+  	<url-pattern>/quitServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+  	<servlet-name>outServlet</servlet-name>
+  	<servlet-class>hit.poms.login.OutServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>outServlet</servlet-name>
+  	<url-pattern>/outServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>companyMessage</servlet-name>
+  	<servlet-class>hit.poms.dsz.servlet.CompanyMessageServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>companyMessage</servlet-name>
+  	<url-pattern>/companyMessage</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>updateServlet</servlet-name>
+  	<servlet-class>hit.poms.dsz.servlet.UpdateServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>updateServlet</servlet-name>
+  	<url-pattern>/updateServlet</url-pattern>
+  </servlet-mapping>
+  
+  <filter>
+		<filter-name>quitFilter</filter-name>
+		<filter-class>hit.poms.filter.QuitFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>quitFilter</filter-name>
+		<url-pattern>/loginServlet</url-pattern>
+	</filter-mapping>
+ <!-- dsz 系统状态维护 -->
+	<!--报刊操作servlet  -->
+	<servlet>
+		<servlet-name>paperServlet</servlet-name>
+		<servlet-class>hit.poms.paper.servlet.PaperServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>paperServlet</servlet-name>
+		<url-pattern>/paperServlet</url-pattern>
+	</servlet-mapping>
+	
+	 <!-- 消息servlet -->
+   <servlet>
+		<servlet-name>informMessageServlet</servlet-name>
+		<servlet-class>hit.poms.mail.servlet.InformMessageServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>informMessageServlet</servlet-name>
+		<url-pattern>/informMessageServlet</url-pattern>
+	</servlet-mapping>
+	<!-- 纠正地址servlet -->
+	<servlet>
+		<servlet-name>correctAddressServlet</servlet-name>
+		<servlet-class>hit.poms.correctdistribution.servlet.CorrectAddressServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>correctAddressServlet</servlet-name>
+		<url-pattern>/correctAddressServlet</url-pattern>
+	</servlet-mapping>
+	<!-- 修改密码servlet -->
+	<servlet>
+		<servlet-name>modifyCodeServlet</servlet-name>
+		<servlet-class>hit.poms.modifycode.servlet.ModifyCodeServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>modifyCodeServlet</servlet-name>
+		<url-pattern>/modifyCodeServlet</url-pattern>
+	</servlet-mapping>
+<!-- 采用江南style 
+ 付贵山地址拦截器 
+ begin 
+  	<filter>
+		<filter-name>pathFilter</filter-name>
+		<filter-class>hit.poms.filter.pathFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name></filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	end -->
+	
+	<!--zgd zhongxingshoufei payServlet  begin -->
+  	<servlet>
+		<servlet-name>payServlet</servlet-name>
+		<servlet-class>hit.poms.shoufeizhongxin.servlet.PayServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>payServlet</servlet-name>
+		<url-pattern>/payServlet</url-pattern>
+	</servlet-mapping>
+	<!-- zgd zhongxingshoufei payServlet  end -->
+	<!--zgd summaryServlet  begin -->
+  	<servlet>
+		<servlet-name>summaryServlet</servlet-name>
+		<servlet-class>hit.poms.summary.servlet.SummaryServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>summaryServlet</servlet-name>
+		<url-pattern>/summaryServlet</url-pattern>
+	</servlet-mapping>
+	<!-- zgd summaryServlet  end -->
+  <!--zgd bonusServlet  begin -->
+  	<servlet>
+		<servlet-name>bonusServlet</servlet-name>
+		<servlet-class>hit.poms.bonus.servlet.BonusServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>bonusServlet</servlet-name>
+		<url-pattern>/bonusServlet</url-pattern>
+	</servlet-mapping>
+	<!-- zgd bonusServlet  end -->
+	<!--zgd couponsServlet  begin -->
+  	<servlet>
+		<servlet-name>couponsServlet</servlet-name>
+		<servlet-class>hit.poms.bonus.servlet.CouponsServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>couponsServlet</servlet-name>
+		<url-pattern>/couponsServlet</url-pattern>
+	</servlet-mapping>
+	<!-- zgd couponsServlet  end -->
+  <!-- 徐新钧的characterFilter  begin -->
+ 	<!-- characterFilter  begin -->
+  	<filter>
+		<filter-name>characterFilter</filter-name>
+		<filter-class>hit.poms.filter.CharacterFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>characterFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	<!-- characterFilter  end -->
+	
+	<!-- 徐新钧的searchServlet  begin -->
+	<servlet>
+		<servlet-name>searchServlet</servlet-name>
+		<servlet-class>hit.poms.search.servlet.SearchServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>searchServlet</servlet-name>
+		<url-pattern>/searchServlet</url-pattern>
+	</servlet-mapping>
+	<!-- searchServlet  end -->  
+  
+    <!--  周游的servlet start -->  
+   <!-- jumpControlServlet start-->
+	<servlet>
+		<servlet-name>jumpControlServlet</servlet-name>
+		<servlet-class>zhouyou.control.JumpControlServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>jumpControlServlet</servlet-name>
+		<url-pattern>/jumpControlServlet
+      </url-pattern>
+	</servlet-mapping>
+   <!-- jumpControlServlet End -->
+   
+   
+	 <!-- CallCenterHandlerServlet start-->
+	<servlet>
+		<servlet-name>callCenterHandlerServlet</servlet-name>
+		<servlet-class>zhouyou.control.callcenter.servlet.CallCenterHandlerServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>callCenterHandlerServlet</servlet-name>
+		<url-pattern>/callCenterHandlerServlet</url-pattern>
+	</servlet-mapping>
+   <!-- CallCenterHandlerServlet end-->
+   
+   
+  <!--  周游的servlet end -->
+
+  
+  <!-- zhengxue 人事管理_业绩统计 -->
+  <servlet>
+  	<servlet-name>empManager_businessReportQueryServlet</servlet-name>
+  	<servlet-class>hit.poms.empManager.businessReport.servlet.EmpManager_businessReportQueryServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>empManager_businessReportQueryServlet</servlet-name>
+  	<url-pattern>/empManager_businessReportQueryServlet</url-pattern>
+  </servlet-mapping>
+  
+  <!-- YCR  empServlet start 人事管理_员工信息设置  -->
+   <servlet>
+  	<servlet-name>empServlet</servlet-name>
+  	<servlet-class>hit.poms.empManager.pm.servlet.EmpServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>empServlet</servlet-name>
+  	<url-pattern>/empServlet</url-pattern>
+  </servlet-mapping>
+    <!-- YCR  loginServlet start 登录  -->
+   <servlet>
+  	<servlet-name>loginServlet</servlet-name>
+  	<servlet-class>hit.poms.login.servlet.LoginServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>loginServlet</servlet-name>
+  	<url-pattern>/loginServlet</url-pattern>
+  </servlet-mapping>
+  <!-- loginServlet end -->
+      <!-- YCR  pubFmServlet start 登录  -->
+   <servlet>
+  	<servlet-name>pubFmServlet</servlet-name>
+  	<servlet-class>hit.poms.financeManage.servlet.PubFmServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>pubFmServlet</servlet-name>
+  	<url-pattern>/pubFmServlet</url-pattern>
+  </servlet-mapping>
+  <!-- pubFmServlet end -->
+  
+  <!-- zhengxue 投递管理_欠款单查询 -->
+  <servlet>
+  	<servlet-name>deliverManager_orderListServlet</servlet-name>
+  	<servlet-class>hit.poms.deliverManager.print.servlet.DeliverManager_orderListServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>deliverManager_orderListServlet</servlet-name>
+  	<url-pattern>/deliverManager_orderListServlet</url-pattern>
+  </servlet-mapping>
+  
+  <!-- zhengxue 投递管理_欠款单打印 -->
+  <servlet>
+  	<servlet-name>deliverManager_orderPrintServlet</servlet-name>
+  	<servlet-class>hit.poms.deliverManager.print.servlet.DeliverManager_orderPrintServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>deliverManager_orderPrintServlet</servlet-name>
+  	<url-pattern>/deliverManager_orderPrintServlet</url-pattern>
+  </servlet-mapping>
+
+  <!-- zhengxue 投递管理_投递段管理1 -->
+  <servlet>
+  	<servlet-name>deliverManager_desManagerServlet</servlet-name>
+  	<servlet-class>hit.poms.deliverManager.desManager.servlet.DeliverManager_desManagerServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>deliverManager_desManagerServlet</servlet-name>
+  	<url-pattern>/deliverManager_desManagerServlet</url-pattern>
+  </servlet-mapping>
+  
+  <!-- zhengxue 投递管理_投递段管理1 -->
+  <servlet>
+  	<servlet-name>deliverManager_desManagerQueryServlet</servlet-name>
+  	<servlet-class>hit.poms.deliverManager.desManager.servlet.DeliverManager_desManagerQueryServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>deliverManager_desManagerQueryServlet</servlet-name>
+  	<url-pattern>/deliverManager_desManagerQueryServlet</url-pattern>
+  </servlet-mapping>
+  <!-- zhengxue 投递管理_投递段管理2 -->
+  <servlet>
+  	<servlet-name>deliverManager_desManagerEmpServlet</servlet-name>
+  	<servlet-class>hit.poms.deliverManager.desManager.servlet.DeliverManager_desManagerEmpServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>deliverManager_desManagerEmpServlet</servlet-name>
+  	<url-pattern>/deliverManager_desManagerEmpServlet</url-pattern>
+  </servlet-mapping>
+  <!-- zhengxue 投递管理_下单数统计 -->
+  <servlet>
+  	<servlet-name>deliverManager_orderNumServlet</servlet-name>
+  	<servlet-class>hit.poms.deliverManager.orderNum.servlet.DeliverManager_orderNumServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>deliverManager_orderNumServlet</servlet-name>
+  	<url-pattern>/deliverManager_orderNumServlet</url-pattern>
+  </servlet-mapping>
+  <!-- zhengxue 大客户管理_大客户欠款 -->
+  <servlet>
+  	<servlet-name>bigClientManager_PayServlet</servlet-name>
+  	<servlet-class>hit.poms.bigClientManager.servlet.BigClientManager_PayServlet</servlet-class>
+  </servlet>
+  <!-- 付贵山的 运输系统begin-->
+  <servlet>
+    <servlet-name>addTransport</servlet-name>
+    <servlet-class>hit.poms.servlet.addTransport</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>transportsearch</servlet-name>
+    <servlet-class>hit.poms.servlet.transportsearch</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>gettransportpath</servlet-name>
+    <servlet-class>hit.poms.servlet.gettransportpath</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>gettransportpath</servlet-name>
+    <url-pattern>/gettransportpath</url-pattern>
+  </servlet-mapping>
+   <servlet>
+    <servlet-name>LogoutServlet</servlet-name>
+    <servlet-class>hit.poms.login.servlet.LogoutServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>Addpath</servlet-name>
+    <servlet-class>hit.poms.servlet.Addpath</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>print_sub</servlet-name>
+    <servlet-class>hit.poms.servlet.print_sub</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>Yinshuatotal</servlet-name>
+    <servlet-class>hit.poms.servlet.Yinshuatotal</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LogoutServlet</servlet-name>
+    <url-pattern>/LogoutServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>transportsearch</servlet-name>
+    <url-pattern>/transportsearch</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Addpath</servlet-name>
+    <url-pattern>/Addpath</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>addTransport</servlet-name>
+    <url-pattern>/addTransport</url-pattern>
+  </servlet-mapping>
+    <servlet-mapping>
+    <servlet-name>print_sub</servlet-name>
+    <url-pattern>/print_sub</url-pattern>
+  </servlet-mapping>
+    <servlet-mapping>
+    <servlet-name>Yinshuatotal</servlet-name>
+    <url-pattern>/Yinshuatotal</url-pattern>
+  </servlet-mapping>
+  <!-- 到这里付贵山的基本工作完成了fgs end -->
+  <servlet-mapping>
+  	<servlet-name>bigClientManager_PayServlet</servlet-name>
+  	<url-pattern>/bigClientManager_PayServlet</url-pattern>
+  </servlet-mapping>
+
+
+
+  <welcome-file-list>
+    <welcome-file>login.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>
